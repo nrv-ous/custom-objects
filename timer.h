@@ -27,7 +27,7 @@ namespace std
       {
         if (ticking)
         {
-          callback(std::forward<vargs>(args)...);
+          callback(forward<vargs>(args)...);
           this_thread::sleep_for(interval);
         }
       }
