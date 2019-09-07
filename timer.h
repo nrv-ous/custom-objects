@@ -1,13 +1,16 @@
+#pragma once
+
 namespace std
 {
-  template<typename unit>
+  template<class unit>
   class timer
   {
     unit interval;
     bool ticking;
   public:
     timer(unit interval) : interval(interval)
-    {
+    { 
+      ticking = true;
     }
 
     void start()
